@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@font-face {
+  font-family: "Oswald";
+  src: url(./assets/fonts/Oswald-Regular.ttf);
+}
+
+/* L'etoile donne du style à tout les elements */
+/* *{
+margin: 0;
+padding: 0;
+} */
+
+body {
+  font-family: "Oswald", Verdana;
+  background: url(./assets/img/bg.jpeg) center/cover;
+  /* VH(viewport height) =100 % de la taille  de l ecran de l'utilisateur */
+  min-height: 100vh;
+}
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  /* Les tailles de polices doivent etre en rem */
+  font-size: 2.5rem;
+  text-shadow: 3px 2px 9px #00000080;
+  color: rgb(246, 153, 47);
+  text-decoration: underline;
+  font-family: "Oswald", "Segoe UI";
+}
+
+main {
+  min-height: 500px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.89);
+  /* Centrer une boite  */
+  margin: 0 auto;
+  border: 2px solid blue;
+  border-radius: 20px;
+  box-shadow: 0 0 0 black;
+  padding: 15px;
+}
+
+h2 {
+  margin: 0;
+}
+
+.flexbox,
+.grid {
+  border: 2px solid skyblue;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* FlEXBOX : Sert à répartir équitablement des éléments sur la page */
+.flexbox ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.flexbox li {
+  list-style: none;
+  height: 160px;
+  width: 160px;
+  margin: 10px;
+  border: 2px solid black;
+  background: turquoise;
+  /* Centrer un unique element verticalement et horizontalement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns:30% 70%;
+}
+
+.grid img{
+ width: 80%;
+ margin-top: 20px;
+}
+
+form{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-areas: 
+"i1 i2"
+"ta ta"
+"vi bt";
+}
+
+input , textarea{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+textarea{
+    grid-area: ta;
+    height:40px;
+    resize: none;
+}
+
+#btn-submit{
+    grid-area: bt;
+    cursor: pointer;
+    background:cyan;
+    transition: 0.2s;
+}
+
+#btn-submit:hover{
+    background: darkblue;
+    color:white ;
+}
