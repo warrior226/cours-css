@@ -45,11 +45,12 @@ h2 {
 }
 
 .flexbox,
-.grid {
+.grid , .absolute {
   border: 2px solid skyblue;
   border-radius: 10px;
   padding: 10px;
   margin-top: 20px;
+  min-height: 150px;
 }
 
 /* FlEXBOX : Sert à répartir équitablement des éléments sur la page */
@@ -112,4 +113,32 @@ textarea{
 #btn-submit:hover{
     background: darkblue;
     color:white ;
+}
+
+
+/* Absolute */
+/* Sana element en Relative , de base l'ele;ent en absolute l'est par rapport au body  */
+/* Il faut mettre une position relative au parent pour contraindre l'element en absolute dans les frontieres de son parent */
+.absolute{
+  position: relative;
+}
+
+#circle1{
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  background: skyblue;
+  border-radius: 150px;
+  top: -20px;
+  right: -15px;
+}
+#circle2{
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  background: teal;
+  border-radius: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+ 
 }
